@@ -3,6 +3,11 @@
     src: url(BungeeShade-Regular.ttf);
 }
 
+@font-face {
+    font-family: bungee_out;
+    src: url(BungeeOutline-Regular.ttf);
+}
+
 body {
     margin: 0;
 
@@ -49,7 +54,6 @@ nav>div {
     background-color: rgba(255, 255, 255, 0.6);
     font-weight: bold;
     font-size: larger;
-    /* border: 1.5px solid white; */
     box-shadow: 1px 1px 5px 2px white;
 }
 
@@ -138,14 +142,14 @@ ul {
 }
 
 .album_data>div>h1 {
-    font-family: bungee;
+    font-family: bungee_out;
     font-size: 4vh;
     opacity: 0.8;
 }
 
 .album_data {
     grid-column: 1 / span 2;
-    margin-left: 3vw
+    margin-left: 3vw;
 }
 
 .anecdotes {
@@ -226,6 +230,13 @@ ul {
 }
 
 #apocalypse_dudes>.anecdotes>.image {
+    background-image: url("Hank_Cornelis.jpeg");
+    background-position: center;
+    background-size: cover;
+    color: #f5b99e;
+}
+
+#apocalypse_dudes>.anecdotes>.image {
     grid-column: 7 / span 4;
     border-radius: 4vh;
 }
@@ -238,4 +249,9 @@ footer {
 #apocalypse_dudes>.song_list>div {
     background-color: black;
     color: rgb(253, 253, 253);
+}
+
+#apocalypse_dudes>.anecdotes>li {
+    background-color: #53666d;
+    color: #fefaf4;
 }
