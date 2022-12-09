@@ -96,12 +96,11 @@ article {
     display: inline-block;
     background-color: #100c09;
     color: #c4b581;
-    height: 250px;
+    /* height: 250px; */
     align-items: center;
     justify-content: center;
 
     padding-right: 2vh;
-    /* width: 246px; */
 }
 
 #scandinavian_leather>.song_list>div:last-child>ul {
@@ -119,10 +118,6 @@ article {
 .show_hover {
     border-radius: 20px 20px 0 0;
     width: 100%;
-    /* border-radius: 4vh 4vh 0 0; */
-    /* position: absolute; */
-    /* opacity: 1;
-    transition: opacity 0.4s; */
 }
 
 .show_hover:hover {
@@ -131,11 +126,9 @@ article {
 }
 
 .show_not_hover {
-    /* border-radius: 4vh 4vh 0 0; */
     border-radius: 20px 20px 0 0;
     position: absolute;
     right: 0;
-    /* position: relative; */
     opacity: 1;
     transition: opacity 0.4s;
     width: 100%;
@@ -159,10 +152,6 @@ ul {
 .album_data {
     grid-column: 1 / span 3;
     margin: 3vw 3vw 0 3vw;
-}
-
-.album_description {
-    max-height: 50px;
 }
 
 .anecdotes {
@@ -281,4 +270,78 @@ footer {
 .album_description,
 .album_data {
     max-height: 0px;
+}
+
+
+
+/* desktop mode */
+
+
+
+@media (max-width: 1111px) and (min-width: 900px) {
+    header {
+        font-size: 5vh;
+    }
+
+    .album_data h1 {
+        font-size: 4vh;
+    }
+}
+
+
+
+/* tablet mode */
+
+
+
+@media (max-width: 800px) and (min-width: 500px) {
+
+    .show_hover {
+        display: none;
+    }
+
+    .show_hover:hover {
+        display: none;
+    }
+
+    .show_not_hover:hover {
+        display: none;
+    }
+
+    .cover {
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 2;
+        margin-left: 3vw;
+
+        border-radius: 20px 0 0 20px;
+    }
+
+    #scandinavian_leather>.cover {
+        background-color: #0f0b0a;
+    }
+
+    #apocalypse_dudes>.cover {
+        background-color: black;
+    }
+
+    .song_list {
+        grid-column: 4 / span 2;
+        grid-row: 1 / span 2;
+
+        flex-direction: column;
+
+        margin-top: 3vw;
+    }
+
+    .song_list>div:first-child {
+        grid-column: 4 / span 2;
+        grid-row: 1;
+
+        border-radius: 0 20px 0 0;
+    }
+
+    .song_list>div:last-child {
+        grid-column: 4 / span 2;
+        grid-row: 2;
+    }
 }
