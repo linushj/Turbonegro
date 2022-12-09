@@ -21,7 +21,7 @@ body {
 body>div>div {
     background-color: rgba(0, 0, 0, 0.5);
     margin: 15vh 3vw 5vh 3vw;
-    border-radius: 4vh;
+    border-radius: 20px;
 }
 
 header {
@@ -46,7 +46,7 @@ nav>div {
     text-align: center;
     padding: 3vh 0;
     display: inline-block;
-    border-radius: 2vh;
+    border-radius: 10px;
     border: 0.5px solid rgba(255, 255, 255, 0.6);
 }
 
@@ -69,7 +69,7 @@ article {
     background-color: rgba(0, 0, 0, 0.3);
     margin: 0 3vh 8vh 3vh;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 4vh;
+    border-radius: 20px;
 }
 
 #scandinavian_leather {
@@ -86,9 +86,10 @@ article {
 .song_list {
     grid-column: 4 / span 2;
     grid-row: 3;
-    margin-bottom: 5vh;
+    margin-bottom: 1vh;
     display: flex;
     gap: 1vh;
+    margin-right: 3vw;
 }
 
 .song_list>div {
@@ -99,7 +100,8 @@ article {
     align-items: center;
     justify-content: center;
 
-    width: 246px;
+    padding-right: 2vh;
+    /* width: 246px; */
 }
 
 #scandinavian_leather>.song_list>div:last-child>ul {
@@ -109,15 +111,18 @@ article {
 .cover {
     grid-row: 1 / span 2;
     grid-column: 4 / span 2;
-    margin-top: 3vh;
+    margin-top: 3vw;
+    margin-right: 3vw;
     position: relative;
 }
 
 .show_hover {
-    border-radius: 4vh 4vh 0 0;
-    position: absolute;
-    opacity: 1;
-    transition: opacity 0.4s;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    /* border-radius: 4vh 4vh 0 0; */
+    /* position: absolute; */
+    /* opacity: 1;
+    transition: opacity 0.4s; */
 }
 
 .show_hover:hover {
@@ -126,10 +131,14 @@ article {
 }
 
 .show_not_hover {
-    border-radius: 4vh 4vh 0 0;
-    position: relative;
+    /* border-radius: 4vh 4vh 0 0; */
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    right: 0;
+    /* position: relative; */
     opacity: 1;
     transition: opacity 0.4s;
+    width: 100%;
 }
 
 .show_not_hover:hover {
@@ -148,8 +157,12 @@ ul {
 }
 
 .album_data {
-    grid-column: 1 / span 2;
-    margin-left: 3vw;
+    grid-column: 1 / span 3;
+    margin: 3vw 3vw 0 3vw;
+}
+
+.album_description {
+    max-height: 50px;
 }
 
 .anecdotes {
@@ -162,7 +175,7 @@ ul {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 1fr;
     margin-right: 3vw;
-    margin-bottom: 4vh;
+    margin-bottom: 3vw;
     gap: 1vh;
 }
 
@@ -176,7 +189,7 @@ ul {
 }
 
 .anecdotes>.image_1 {
-    color: rgb(250, 250, 250);
+    color: #fefefe;
 }
 
 .top_right_90 {
@@ -199,20 +212,24 @@ ul {
     background-position: center;
     background-size: cover;
     grid-column: 9 / span 2;
-    border-radius: 0 4vh 4vh 4vh;
+    border-radius: 0 20px 20px 20px;
 }
 
 .bottom_right_90 {
     grid-column: 11 / span 2;
-    border-radius: 4vh 4vh 0 4vh;
+    border-radius: 20px 20px 0 20px;
 }
 
 .song_list>div:first-child {
-    border-radius: 0 0 0 4vh;
+    border-radius: 0 0 0 20px;
+
+    overflow: scroll;
 }
 
 .song_list>div:last-child {
-    border-radius: 0 0 4vh 0;
+    border-radius: 0 0 20px 0;
+
+    overflow: scroll;
 }
 
 .song_list>div>h2:first-child {
@@ -221,12 +238,12 @@ ul {
 
 #apocalypse_dudes>.anecdotes>.bottom_left_90 {
     grid-column: 1 / span 4;
-    border-radius: 4vh 4vh 4vh 0;
+    border-radius: 20px 20px 20px 0;
 }
 
 #apocalypse_dudes>.anecdotes>.top_left_90 {
     grid-column: 5 / span 2;
-    border-radius: 0 4vh 4vh 4vh;
+    border-radius: 0 20px 20px 20px;
 }
 
 #apocalypse_dudes>.anecdotes>.image {
@@ -238,12 +255,12 @@ ul {
 
 #apocalypse_dudes>.anecdotes>.image {
     grid-column: 7 / span 4;
-    border-radius: 4vh;
+    border-radius: 20px;
 }
 
 footer {
     color: wheat;
-    padding: 50px;
+    padding: 4vw 0 2vw 2vw;
 }
 
 #apocalypse_dudes>.song_list>div {
@@ -254,4 +271,14 @@ footer {
 #apocalypse_dudes>.anecdotes>li {
     background-color: #53666d;
     color: #fefaf4;
+}
+
+.album_description,
+.album_data>div {
+    opacity: 0.8;
+}
+
+.album_description,
+.album_data {
+    max-height: 0px;
 }
